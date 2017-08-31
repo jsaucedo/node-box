@@ -72,10 +72,7 @@ Vagrant.configure('2') do |config|
   # SHELL
 
   config.vm.provision 'chef_solo' do |chef|
-    chef.cookbooks_path = 'cookbooks'
+    chef.cookbooks_path = '.'
      chef.add_recipe 'equinauts'
-  #  chef.add_recipe 'seven-zip'
-  #  chef.add_recipe 'build-essential'
-  #  chef.add_recipe 'nodejs'
   end
 end
